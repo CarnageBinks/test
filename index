@@ -1,0 +1,20 @@
+const  Discord = require('discord.js');
+const client = new Discord.Client;
+var id = '671467543872929793'
+var prefix = '!'
+client.on('ready', () => {
+  console.log('Lvcid');
+  client.user.setActivity('ORZANOS ISLAND', {type: "STREAMING", url: "https://www.twitch.tv/qdlcarnage"})
+});
+
+client.on('message', message => {
+let args = message.content.split(" ").slice(1);
+    if (message.content.startsWith(prefix + 'emb')){
+        message.delete()
+        let Embed = new Discord.RichEmbed()
+        .setDescription(`${args.join(" ")}`)
+        .setColor(`fc0303`)
+        message.channel.send(Embed)
+    }
+});
+client.login('NjcxNDY3NTQzODcyOTI5Nzkz.Xi9daA.63WQx-5aS9PWdG6QHry8UrZmZZQ')
