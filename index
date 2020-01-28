@@ -17,4 +17,4 @@ let args = message.content.split(" ").slice(1);
         message.channel.send(Embed)
     }
 });
-client.login('NjcxNDY3NTQzODcyOTI5Nzkz.Xi9daA.63WQx-5aS9PWdG6QHry8UrZmZZQ')
+client.login(process.env.TOKEN)
